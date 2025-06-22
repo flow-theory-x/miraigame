@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mirai Jump Game</title>
+    <title>チームみらい非公式キャラクター：みらいぐまゲーム</title>
     <style>
         * {
             margin: 0;
@@ -33,7 +33,6 @@
             display: flex;
             flex-direction: column;
             position: relative;
-            margin-top: 50px;
         }
         
         #gameCanvas {
@@ -52,6 +51,8 @@
             right: 20px;
             pointer-events: none;
             z-index: 10;
+            display: flex;
+            justify-content: flex-end;
         }
         
         .score {
@@ -141,7 +142,7 @@
         let groundY;
 
         function updateGroundY() {
-            groundY = canvas.height - 120 - player.height;
+            groundY = canvas.height - 70 - player.height;
             if (!player.jumping && player.grounded) {
                 player.y = groundY;
             }
@@ -185,7 +186,7 @@
             const enemyHeight = 60;
             enemies.push({
                 x: canvas.width,
-                y: canvas.height - 120 - enemyHeight,
+                y: canvas.height - 70 - enemyHeight,
                 width: enemyWidth,
                 height: enemyHeight,
                 speed: gameSpeed,
